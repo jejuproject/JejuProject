@@ -1,0 +1,15 @@
+/* 웹폰트 */
+@import url("//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css");
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic);
+* {font-family: 'Roboto', 'Nanum Barun Gothic'}
+
+/* Global */
+body {background: #BCAAA4}
+
+.jumbotron {
+	text-align: center;
+	padding: 30px;
+	font-weight: 700;
+	color: #FFFFFF;
+	font-size: 25pt;
+}
