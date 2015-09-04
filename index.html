@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Jeju Project</title>
 		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="./css/materialize.min.css">
 		<link rel="stylesheet" href="./css/style.min.css">
 		<script src="./js/jquery.min.js"></script>
@@ -14,8 +15,15 @@
 		<nav class="teal">
 			<div class="container">
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">제주프로젝트</a>
+					<a href="#" class="brand-logo"><span class="fa fa-mobile"></span> Jeju Project</a>
+					<a href="#" data-activates="sidebar" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="#">Menu1</a></li>
+						<li><a href="#">Menu2</a></li>
+						<li><a href="#">Menu3</a></li>
+						<li><a href="#">Menu4</a></li>
+					</ul>
+					<ul class="side-nav" id="sidebar">
 						<li><a href="#">Menu1</a></li>
 						<li><a href="#">Menu2</a></li>
 						<li><a href="#">Menu3</a></li>
@@ -29,5 +37,9 @@
 				Jeju Project
 			</div>
 		</div>
+		
+		
+		<script src="./js/materialize.min.js"></script>
+		<script src="./js/init.min.js"></script>
 	</body>
 </html>
