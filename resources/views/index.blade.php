@@ -20,16 +20,16 @@
 						<a href="#" class="brand-logo center"><img src="./image/logo.png" class="nav-logo"></a>
 						<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>				
 						<ul id="nav-mobile" class="left hide-on-med-and-down">
-							<li><a href="#">Menu1</a></li>
-							<li><a href="#">Menu2</a></li>
-							<li><a href="#">Menu3</a></li>
-							<li><a href="#">Menu4</a></li>
+							<li><a href="#">제주프로젝트 정보</a></li>
+							<li><a href="#">지원기기</a></li>
+							<li><a href="#">Contact Us</a></li>
+							
 						</ul>
 						<ul class="side-nav" id="mobile-demo">
-							<li><a href="#">Menu1</a></li>
-							<li><a href="#">Menu2</a></li>
-							<li><a href="#">Menu3</a></li>
-							<li><a href="#">Menu4</a></li>
+							<li><a href="#">제주프로젝트 정보</a></li>
+							<li><a href="#">지원기기</a></li>
+							<li><a href="#">Contact Us</a></li>
+							
 						</ul>
 					</div>
 				</nav>
@@ -104,7 +104,7 @@
 			</div>
 			<div class="footer-copyright">
 				<div class="container">
-					© 2014 Copyright Text
+					© 2015 Copyright Jeju Project
 					<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 				</div>
 			</div>
