@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+
+
+<head>
+  <title>네이비</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a  class="navbar-brand" href="#"><!-- <img src="./image/h.png"  height="30px" />-->네이비</a>
+	  
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="./index.html">검색</a></li>
+      <li><a href="http://mail.naver.com">메일</a></li>
+      <li><a href="./news.html">뉴스</a></li>
+      <li><a href="http://cafe.naver.com">카페</a></li>
+	  <li><a href="http://blog.naver.com">블로그</a></li>
+    </ul>
+  </div>
+</nav>
+ 
+<div class="container">
+<script>
+ function view_img(){
+  var val = document.getElementById('input_value').value;
+  var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ie=utf8&query=";
+  var findnaver=url+val;
+  window.location.href = findnaver ;
+ }
+</script>
+
+
+
+
+
+
+<div class="btn-group" role="group" aria-label="...">  <center> <input  type="text" id="input_value" weight="10px" class="form-control" >
+  <button id="button" class="btn btn-default" onclick="javascript_:view_img()" >검색</button></center></div>
+
+  
+
+
+</div>
+
+</body>
+</html>
