@@ -3,7 +3,11 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*!
+ * Navystrap for NAVY
+ */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -3059,6 +3063,7 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
+
 .btn-default {
   color: #333;
   background-color: #fff;
@@ -3116,6 +3121,19 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #333;
 }
+
+.btn-navy:hover {
+  color: #ffffff;
+  background-color: #009688;
+  border-color: #009688;
+}
+.btn-navy:focus,
+.btn-default.focus {
+  color: #ffffff;
+
+}
+
+
 .btn-primary {
   color: #fff;
   background-color: #337ab7;
@@ -4496,11 +4514,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #2a365c;
-  border-color: #343e5c;
+  background-color: #009688;
+  border-color: #009688;
 }
 .navbar-default .navbar-brand {
-  color: #ffffff;
+  color: black;
 }
 /*
 .navbar-default .navbar-brand:hover,
@@ -4518,13 +4536,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-   color:#2a365c;
+   color:#009688;
   background-color: #ffffff;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #2a365c;
+  color: #009688;
   background-color: #ffffff;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -4538,7 +4556,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  color: #2a365c;
+  color: #009688;
   background-color: #ffffff;
 }
 .navbar-default .navbar-toggle .icon-bar {
@@ -4552,7 +4570,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #555;
-  background-color: #2a365c;
+  background-color: #009688;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -5077,6 +5095,11 @@ a.thumbnail.active {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
+}
+.alert-navy {
+  color: white;
+  background-color: #009688;
+  border-color: #009688;
 }
 .alert-info hr {
   border-top-color: #a6e1ec;

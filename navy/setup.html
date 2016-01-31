@@ -1,0 +1,89 @@
+﻿
+ <!DOCTYPE html>
+<html lang="ko">
+
+
+
+<head>
+ 
+  <title>두레인</title>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/navystrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a  class="navbar-brand" style="color:white" href="#">두레인</a>
+	  
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="./index.html">검색</a></li>
+    <li class="active"><a href="./setup.html">설정</a></li>
+     
+    </ul>
+  </div>
+</nav>
+ 
+<div class="container">
+<script>
+ function setCookie(cValue){
+        var expire = new Date();
+		cName = "sss" ;
+		cDay = "30" ;
+        expire.setDate(expire.getDate() + cDay);
+        cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+        if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+        document.cookie = cookies;
+    }
+	  function getCookie(cName) {
+        cName = cName + '=';
+        var cookieData = document.cookie;
+        var start = cookieData.indexOf(cName);
+        var cValue = '';
+        if(start != -1){
+            start += cName.length;
+            var end = cookieData.indexOf(';', start);
+            if(end == -1)end = cookieData.length;
+            cValue = cookieData.substring(start, end);
+        }
+        return unescape(cValue);
+    }
+</script>
+
+
+<!-- 조크 알림 -->
+<div class="alert alert-danger">
+  <strong>경고!</strong> 실험적인 기능입니다! 주의하세요.
+</div>
+<!-- 조크 알림 -->
+
+<!-- 도우미 -->
+
+  <div class="alert alert-info">
+  <strong>두레인 도우미</strong> 아래의 버튼중 <button id="button" class="btn  alert-navy btn-navy "  >네이버</button> 를 누르면 30일간 네이버로만 바로 접속되고 <button id="button" class="btn  alert-navy btn-navy "  >구글</button> 를 누르면 구글로만 접속됩니다.
+</div>
+
+<!-- 도우미 -->
+<!-- 검색 -->
+<br>
+<center>
+   <button id="button_nav" class="btn  btn-navy alert alert-navy " onclick="javascript_:setCookie('naver')" >네이버</button>
+   <button id="button_ggl" class="btn  btn-navy alert alert-navy " onclick="javascript_:setCookie('google')" >구글</button>
+  
+  </center>
+<!-- 검색 -->
+
+
+
+</div>
+
+    </body>
+</html>
+</body>
+</html>

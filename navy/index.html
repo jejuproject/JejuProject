@@ -4,53 +4,157 @@
 
 
 <head>
-  <title>네이비</title>
+ 
+  <title>두레인</title>
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/navystrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a  class="navbar-brand" href="#"><!-- <img src="./image/h.png"  height="30px" />-->네이비</a>
+      <a  class="navbar-brand" style="color:white" href="#">두레인</a>
 	  
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="./index.html">검색</a></li>
-      <li><a href="http://mail.naver.com">메일</a></li>
-      <li><a href="./news.html">뉴스</a></li>
-      <li><a href="http://cafe.naver.com">카페</a></li>
-	  <li><a href="http://blog.naver.com">블로그</a></li>
+    <li><a href="./setup.html">설정</a></li>
+     
     </ul>
   </div>
 </nav>
  
 <div class="container">
 <script>
- function view_img(){
-  var val = document.getElementById('input_value').value;
-  var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ie=utf8&query=";
-  var findnaver=url+val;
-  window.location.href = findnaver ;
+function url_make(){
+	var val = document.getElementById('input_value').value;
+	
+	$("#navy_progress").attr("style","width:100%");
+	$("h3").text(val+" 검색중...");
+ if(getCookie('sss') != "naver" && getCookie('sss') != "google")
+ {
+ setTimeout(function(){ 
+
+		$("h3").text(val+"을 어디에서 검색하시겠습니까?")
+		$("#sgbutton").attr("style","visibility:visible");
+		$("#sgnbutton").attr("style","visibility:visible");
+	}, 1500);  
  }
+
+	
+}
+<!--사이트 이동-->
+function leedong(portal){
+ var val = document.getElementById('input_value').value;
+  
+ 
+	if (portal == "naver"){
+		var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ie=utf8&query=";
+		var leedonggo=url+val;
+		window.location.href = leedonggo ;
+	}
+	if (portal == "google"){
+		var url = "https://www.google.co.kr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=";
+		var leedonggo=url+val;
+		window.location.href = leedonggo ;
+	}
+	
+}
+function setCookie(cValue){
+        var expire = new Date();
+		cName = "sss" ;
+		cDay = "30" ;
+        expire.setDate(expire.getDate() + cDay);
+        cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+        if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+        document.cookie = cookies;
+    }
+function getCookie(cName) {
+        cName = cName + '=';
+        var cookieData = document.cookie;
+        var start = cookieData.indexOf(cName);
+        var cValue = '';
+        if(start != -1){
+            start += cName.length;
+            var end = cookieData.indexOf(';', start);
+            if(end == -1)end = cookieData.length;
+            cValue = cookieData.substring(start, end);
+        }
+        return unescape(cValue);
+    }
 </script>
 
+<script>
+$(document).ready(function(){
+
+$("#navy_progress").attr("style","width:0%")
 
 
+});
+</script>
+<!-- 조크 알림 -->
+<div class="alert alert-danger">
+  <strong>경고!</strong> 사이트가 심히 가벼우니 주의하시기 바랍니다!
+</div>
+<!-- 조크 알림 -->
 
+<!-- 도우미 -->
 
+  <div class="alert alert-info">
+  <strong>두레인 도우미</strong> 아래의 입력창에 검색어를 입력하시고 하단의 <button id="button" class="btn  alert-navy btn-navy "  >검색</button> 을 눌러주세요
+</div>
 
-<div class="btn-group" role="group" aria-label="...">  <center> <input  type="text" id="input_value" weight="10px" class="form-control" >
-  <button id="button" class="btn btn-default" onclick="javascript_:view_img()" >검색</button></center></div>
+<!-- 도우미 -->
+<!-- 검색 -->
+<br>
+<center>
+<div align="right" class="btn-group alert alert-navy" role="group" aria-label="...">  
+ <input  type="text" id="input_value" weight="30px" class="form-control" >
+ 
+  </div>
+   <button id="button_1" class="btn  btn-navy alert alert-navy " onclick="javascript_:url_make()" >검색</button>
+  </center>
+<!-- 검색 -->
 
-  
 
 
 </div>
+<br>
+<!-- 스마트 가이 -->
+<center>
 
+<h3>안녕하세요? 스마트 가이입니다!</h3>
+ <div  style="width:50%" class="progress ">
+ 
+  <div id="navy_progress" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+   
+  </div>
+</div>
+
+</center>
+<!-- 스마트 가이 -->
+<!-- 구글 -->
+<center>
+
+   <button id="sgbutton" style="visibility:hidden" class="btn  btn-sucess " onclick="javascript_:leedong('google')" >구글에서 검색</button>
+    <button id="sgnbutton" style="visibility:hidden" class="btn  btn-sucess " onclick="javascript_:leedong('naver')" >네이버에서 검색</button>
+  </center>
+<!-- 구글 -->
+
+<!--
+<center>
+   <button id="button_nav" class="btn  btn-navy alert alert-navy " onclick="javascript_:setCookie('naver')" >네이버</button>
+   <button id="button_ggl" class="btn  btn-navy alert alert-navy " onclick="javascript_:setCookie('google')" >구글</button>
+  
+  </center>
+-->  
+  </body>
+</html>
 </body>
 </html>
